@@ -81,7 +81,7 @@ export const Search = () => {
       <div className="search-form">
         <input
           type="text"
-          placeholder="Find a user"
+          placeholder="Kullanıcı Adını Arayın..."
           onKeyDown={handleKey}
           onChange={(e) => setUsername(e.target.value)}
           value={username}

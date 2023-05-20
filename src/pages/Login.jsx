@@ -28,7 +28,7 @@ export const Login = () => {
   return (
     <div className='form'>
       <div className='form-wrapper'>
-        <span className="logo">ChatX</span>
+        <span className="logo"><img src="/cluster-logo.png" alt="" /></span>
         <span className="title">Giriş Yap</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder='Email' />

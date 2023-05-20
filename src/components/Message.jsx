@@ -26,7 +26,6 @@ export const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
       </div>
       <div className="message-content">
         <p>{message.text}</p>

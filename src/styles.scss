@@ -17,7 +17,7 @@
 }
 
 .form {
-    background-color: #a7bcff;
+    background-color: #95d5b2;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -32,14 +32,18 @@
         align-items: center;
 
         .logo {
-            color: #5d5b8d;
+            
+            img {
+                object-fit: cover;
+            }
+            color: #2d6a4f;
             font-weight: bold;
             font-size: 24px;
 
         }
 
         .title {
-            color: #5d5b8d;
+            color: #2d6a4f;
             font-size: 12px;
             padding: 10px;
         }
@@ -52,7 +56,17 @@
             input {
                 padding: 10px;
                 border: none;
-                border-bottom: 1px solid #a7bcff;
+                border-top: 1px solid transparent;
+                border-right: 1px solid transparent;
+                border-left: 1px solid transparent;
+                border-bottom: 1px solid #95d5b2;
+                transition: 0.3s all;
+                &:focus {
+                    outline: none;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;
+                    border: 1px solid #95d5b2;
+                    border-radius: 5px;
+                }
 
                 &::placeholder {
                     color: rgb(175, 175, 175);
@@ -65,14 +79,16 @@
             }
 
             button {
-                background-color: #7b96ec;
+                background-color: #40916c;
                 color: white;
                 padding: 10px;
                 font-weight: bold;
                 border: none;
-
+                transition: 0.3s all;
+                border-radius: 10px;
                 &:hover {
                     cursor: pointer;
+                    background-color: #1b4332;
                 }
             }
 
@@ -80,7 +96,7 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: #7b96ec;
+                color: #40916c;
                 font-size: 12px;
                 cursor: pointer;
 
@@ -91,7 +107,7 @@
         }
 
         p {
-            color: #5d5b8d;
+            color: #2d6a4f;
             font-size: 12px;
             padding: 10px;
         }
@@ -99,7 +115,7 @@
 }
 
 .home {
-    background-color: #a7bcff;
+    background-color: #95d5b2;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -118,7 +134,7 @@
 
         .sidebar {
             flex: 1;
-            background-color: #3e3c61;
+            background-color: #2d6a4f;
 
             .search {
                 border-bottom: 1px solid gray;
@@ -144,9 +160,9 @@
                 gap: 10px;
                 color: white;
                 cursor: pointer;
-
+                transition: 0.3s all;
                 &:hover {
-                    background-color: #2f2d52;
+                    background-color: #40916c;
                 }
 
                 img {
@@ -172,7 +188,7 @@
             .navbar {
                 display: flex;
                 align-items: center;
-                background-color: #2f2d52;
+                background-color: #1b4332;
                 height: 2rem;
                 padding: 10px;
                 justify-content: space-between;
@@ -198,12 +214,19 @@
                     }
 
                     button {
-                        background-color: #5d5b8d;
-                        color: #ddddf7;
+                        background-color: #2d6a4f;
+                        color: #fff;
                         font-size: 12px;
                         border: none;
                         cursor: pointer;
                         padding: 0rem 5px;
+                        
+                        transition: 0.3s all;
+                        border-radius: 5px;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #4c956c;
+                        }
                     }
                 }
 
@@ -216,12 +239,12 @@
 
             .chat-info {
                 height: 50px;
-                background-color: #5d5b8d;
+                background-color: #2d6a4f;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
-                color: lightgrey;
+                color: white;
 
                 .chat-icons {
                     display: flex;
@@ -235,10 +258,10 @@
             }
 
             .messages {
-                background-color: #ddddf7;
+                background-color: #d8f3dc;
                 padding: 10px;
                 height: calc(100% - 100px);
-                overflow: scroll;
+                overflow-y: scroll;
 
                 ::--webkit-scrollbar {
                     width: 5px;
@@ -251,16 +274,13 @@
                 .message {
                     display: flex;
                     gap: 20px;
-
+                    align-items: center;
                     .message-info {
                         display: flex;
                         flex-direction: column;
-                        span {
-                            font-size: 10px;
-                        }
                         img {
-                            height: 25px;
-                            width: 25px;
+                            height: 48px;
+                            width: 48px;
                             border-radius: 50%;
                             object-fit: cover;
                         }
@@ -289,12 +309,12 @@
                     &.owner {
                         /* class'ı hem message hem de owner'ı kapsarsa kullanılır*/
                         flex-direction: row-reverse;
-
+                        align-items: center;
                         .message-content {
                             align-items: flex-end;
 
                             p {
-                                background-color: #8da4f1;
+                                background-color: #67b99a;
                                 color: white;
                                 border-radius: 10px 0px 10px 10px;
                             }
@@ -327,6 +347,7 @@
                 .send {
                     display: flex;
                     justify-content: center;
+                    align-items: center;
                     gap: 10px;
 
                     img {
@@ -338,7 +359,13 @@
                         border: none;
                         padding: 10px;
                         color: white;
-                        background-color: #8da4f1;
+                        background-color: #2d6a4f;
+                        transition: 0.3s all;
+                        border-radius: 5px;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #4c956c;
+                        }
                     }
                 }
 

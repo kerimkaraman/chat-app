@@ -59,7 +59,7 @@ export const Register = () => {
   return (
     <div className='form'>
       <div className='form-wrapper'>
-        <span className="logo">ChatX</span>
+        <span className="logo"><img src="/cluster-logo.png" alt="" /></span>
         <span className="title">Kaydol</span>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder='Nickname' />
